@@ -1,0 +1,60 @@
+{
+  "name": "@neisanworks/mongo-driver",
+  "version": "1.0.0",
+  "author": "@neisanworks",
+  "license": "MIT",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "rm -rf dist && tsc --project tsconfig.build.json",
+    "clean": "rm -rf dist",
+    "prepare": "bun run build",
+    "typecheck": "tsc --noEmit"
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "engines": {
+    "bun": "^1.0.0",
+    "node": ">=18"
+  },
+  "keywords": [
+    "bun",
+    "typescript",
+    "sqlite",
+    "driver"
+  ],
+  "module": "index.ts",
+  "dependencies": {
+    "mongodb": "^7.7.0",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/bun": "^1.4.4",
+    "bun-types": "^1.4.4"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "private": false,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/@neisanworks/mongo-driver.git"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "bugs": {
+    "url": "https://github.com/@neisanworks/mongo-driver/issues"
+  },
+  "homepage": "https://github.com/@neisanworks/mongo-driver#readme"
+}
