@@ -30,8 +30,9 @@
   "keywords": [
     "bun",
     "typescript",
-    "sqlite",
-    "driver"
+    "mongodb",
+    "driver",
+    "zod"
   ],
   "module": "index.ts",
   "dependencies": {
